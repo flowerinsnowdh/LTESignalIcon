@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LTESignalIcon</string>
+    <string name="desc">替换状态栏网络图标4G为LTE</string>
+</resources>
