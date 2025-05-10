@@ -20,8 +20,8 @@ public class HookEntry implements IXposedHookLoadPackage {
                 new XC_MethodHook() {
                     @Override
                     protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                        if (((int) param.args[0]) == 0x7f081868) {
-                            param.args[0] = 0x7f081872;
+                        if (((int) param.args[0]) == 0x7f081883) {
+                            param.args[0] = 0x7f08188d;
                         }
                     }
                 }

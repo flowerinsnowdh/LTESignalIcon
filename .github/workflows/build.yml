@@ -1,13 +1,15 @@
-name: Release
+name: Build
 
 on:
   push:
+    branches:
+      - "*"
     tags:
       - "*"
 
 jobs:
-  release:
-    name: Release
+  build:
+    name: Build
     runs-on: "ubuntu-latest"
     permissions:
       contents: write
@@ -29,5 +31,6 @@ jobs:
 
       - uses: softprops/action-gh-release@v2
         name: Upload release
+        if: github.ref_type == 'tag'
         with:
           files: "app/build/outputs/apk/release/app-release-unsigned.apk"
